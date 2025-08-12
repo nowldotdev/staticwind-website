@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+body {
+	font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-weight: 300;
+	background-color: #191919;
+	color: #fff;
+}
+
+:focus {
+	outline: 0;
+}
+
+@custom-variant hocus (&:hover, &:focus);
+@theme {
+	--color-dim: #a0a0a0;
+	--font-phonetic: "Lucida Sans Unicode", "Lucida Grande";
+}
