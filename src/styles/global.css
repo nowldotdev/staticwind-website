@@ -13,6 +13,7 @@ body {
 
 @custom-variant hocus (&:hover, &:focus);
 @theme {
+	--breakpoint-xs: 430px;
 	--color-dim: #a0a0a0;
 	--font-phonetic: "Lucida Sans Unicode", "Lucida Grande";
 }

@@ -1,4 +1,5 @@
 ---
+import Footer from "~/components/Footer.astro";
 import "~/styles/global.css";
 ---
 
@@ -7,12 +8,24 @@ import "~/styles/global.css";
 		<meta charset="utf-8" />
 		
         <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+
+		<link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/>
 		
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+		<meta
+			name="description"
+			content="Minimal, optimized static sites with Astro and Tailwindcss."
+		/>
+		<meta
+			name="author"
+			content="nowl"
+		/>
 		
 		<title>create-staticwind</title>
 	</head>
 	<body>
 		<slot />
+		<Footer />
 	</body>
 </html>

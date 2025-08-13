@@ -1,9 +1,27 @@
 ---
 import Layout from "~/layouts/Layout.astro"
+
+import CommandBox from "~/components/pages/index/CommandBox.astro";
+import Link from "~/components/util/Link.astro";
 ---
 
 <Layout>
-    <main class="grid items-center w-full h-svh">
-        <h1 class="text-2xl text-center">coming soon</h1>
+    <main class="grid justify-center sm:items-center py-24 xs:py-32 h-lvh">
+        <div class="flex flex-col items-center gap-4 md:gap-8 p-2 xs:p-4 sm:p-8">
+            <h1 class="text-2xl xs:text-3xl md:text-4xl lg:text-6xl text-center *:whitespace-nowrap">
+                <!-- prevent static being recognized by tailwind / astro-rename -->
+                <span>Minimal, optimized sta&#116;ic sites</span>
+                <span>with
+                    <span class="bg-gradient-to-r from-[#D83333] to-[#F041FF] text-transparent bg-clip-text">Astro</span>
+                    and 
+                    <span class="text-sky-300">Tailwindcss</span>.
+                </span>
+            </h1>
+            <div class="flex gap-4">
+                <Link href="https://discord.gg/6EpCTemZa8" class="max-xs:text-sm lg:text-lg font-semibold bg-white hocus:bg-white/80 text-black px-4 py-2 rounded-full">Discord Server</Link>
+                <Link href="https://github.com/nowldotdev/create-staticwind" class="max-xs:text-sm lg:text-lg font-semibold border-1 border-white/10 bg-white/2 hocus:bg-white/10 hocus:border-white/0 px-4 py-2 rounded-full">GitHub</Link>
+            </div>
+            <CommandBox />
+        </div>
     </main>
 </Layout>
