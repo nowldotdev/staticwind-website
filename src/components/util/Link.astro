@@ -3,7 +3,10 @@ import type { HTMLAttributes } from "astro/types";
 
 interface Props extends Omit<HTMLAttributes<"a">, "target"> {
 	href: string;
+	noDefault?: boolean;
 }
+
+const defaultLinkStyle = "underline decoration-1 underline-offset-2 decoration-white/25 hocus:decoration-white transition-colors duration-200";
 
 const props = Astro.props;
 
@@ -17,9 +20,16 @@ if (hrefLead != "." && hrefLead != "#" && hrefLead != "/") {
 	if (props.rel) props.rel = props.rel + " noopener";
 	else props.rel = "noopener";
 }
+
+if(!props.noDefault) {
+	if(props.class)
+		props.class += " " + defaultLinkStyle;
+	else
+		props.class = defaultLinkStyle;
+}
 ---
 
 <a
-	{...(outBound ? { target: "_blank" } : {})}
+	{...outBound ? { target: "_blank" } : {}}
 	{...Astro.props}>
 	<slot /></a>

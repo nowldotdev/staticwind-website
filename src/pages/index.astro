@@ -1,27 +1,39 @@
 ---
 import Layout from "~/layouts/Layout.astro"
 
-import CommandBox from "~/components/pages/index/CommandBox.astro";
 import Link from "~/components/util/Link.astro";
+import Hero from "~/components/pages/index/Hero.astro";
 ---
 
 <Layout>
-    <main class="grid justify-center sm:items-center py-24 xs:py-32 h-lvh">
-        <div class="flex flex-col items-center gap-4 md:gap-8 p-2 xs:p-4 sm:p-8">
-            <h1 class="text-2xl xs:text-3xl md:text-4xl lg:text-6xl text-center *:whitespace-nowrap">
-                <!-- prevent static being recognized by tailwind / astro-rename -->
-                <span>Minimal, optimized sta&#116;ic sites</span>
-                <span>with
-                    <span class="bg-gradient-to-r from-[#D83333] to-[#F041FF] text-transparent bg-clip-text">Astro</span>
-                    and 
-                    <span class="text-sky-300">Tailwindcss</span>.
-                </span>
-            </h1>
-            <div class="flex gap-4">
-                <Link href="https://discord.gg/6EpCTemZa8" class="max-xs:text-sm lg:text-lg font-semibold bg-white hocus:bg-white/80 text-black px-4 py-2 rounded-full">Discord Server</Link>
-                <Link href="https://github.com/nowldotdev/create-staticwind" class="max-xs:text-sm lg:text-lg font-semibold border-1 border-white/10 bg-white/2 hocus:bg-white/10 hocus:border-white/0 px-4 py-2 rounded-full">GitHub</Link>
-            </div>
-            <CommandBox />
+    <main class="px-4 md:px-6">
+        <Hero />
+
+        <div class="flex flex-col gap-4 max-w-2xl mx-auto mb-24 md:mb-32">
+            <h2 class="font-medium text-2xl xs:text-3xl md:text-4xl mb-2 md:mb-4">Sta&#116;ic first</h2>
+            <p class="md:text-xl">
+                If I were starting a new site today, I'd go sta&#116;ic by default - using <Link href="https://astro.build">Astro</Link> in <Link href="https://developer.mozilla.org/de/docs/Glossary/SSG">SSG</Link> mode.
+            </p>
+            <p class="block border-l-4 border-white/20 pl-4 md:text-xl">
+                Why?
+            </p>
+            <p class="md:text-xl">
+                Because sta&#116;ic means <strong>faster load times</strong>, <strong>fewer bugs</strong>, and <strong>simple, cheap deployment</strong>. 
+            </p>
+            <p class="md:text-xl">
+                Most sites don't need a backend, so why reach for a full-stack framework like Next.js by default?
+            </p>
+
+        </div>
+        <div class="flex flex-col gap-4 max-w-2xl mx-auto mb-32">
+            <h2 class="font-medium break-keep text-2xl xs:text-3xl md:text-4xl mb-2 md:mb-4">Why use create-staticwind?</h2>
+            <p class="md:text-xl">
+                Honestly, just use it if you like it.
+            </p>
+            <p class="md:text-xl">
+                create-staticwind provides you with a project based on Astro's "Empty Project" starter, with nicer<sup class="text-dim">1</sup> defaults and built-in <Link href="https://docs.astro.build/en/guides/integrations-guide/">integrations</Link> like <Link href="https://tailwindcss.com">Tailwind CSS</Link>, compression and minification integrations.
+            </p>
+            <p class="text-dim text-xs md:text-sm">1: subjective; I prefer them.</p>
         </div>
     </main>
 </Layout>

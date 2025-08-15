@@ -7,6 +7,10 @@ body {
 	color: #fff;
 }
 
+strong {
+	font-weight: 600;
+}
+
 :focus {
 	outline: 0;
 }
